@@ -1,13 +1,13 @@
 /* service-worker.js - cache simples + showNotification support */
-const CACHE_NAME = 'clima-inteligente-cache-v1';
+const CACHE_NAME = 'clima-planejado-cache-v1';
 const FILES_TO_CACHE = [
   './',
   './index.html',
   './styles.css',
   './script.js',
   './manifest.json',
-  './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', evt => {
