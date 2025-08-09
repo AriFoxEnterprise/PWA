@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clima & Rotina</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1><i class="fas fa-cloud-sun"></i>Clima Planejado</h1>
+      <button id="themeToggle" title="Trocar tema">
+        <i class="fas fa-adjust"></i>
+      </button>
+    </header>
+
+    <section class="input-section">
+      <input id="cityInput" type="text" placeholder="Digite a cidade..." list="suggestionsList" autocomplete="off" />
+      <datalist id="suggestionsList"></datalist>
+      <button id="searchBtn" title="Buscar cidade"><i class="fas fa-search"></i></button>
+      <button id="voiceBtn" title="Ditado por voz"><i class="fas fa-microphone"></i></button>
+    </section>
+
+    <section class="info">
+      <div id="location" class="location"></div>
+      <div id="datetime" class="datetime"></div>
+      <div id="weather" class="weather"></div>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+    <section class="actions">
+      <h2>Sugestões:</h2>
+      <div id="suggestions" class="suggestions"></div>
+    </section>
+
+    <section class="reminders">
+      <h2>Lembretes</h2>
+      <form id="reminderForm" autocomplete="off">
+        <input
+          type="text"
+          id="reminderText"
+          placeholder="Escreva o lembrete..."
+          required
+          maxlength="100"
+        />
+        <input type="datetime-local" id="reminderTime" required />
+        <select id="activityType" required>
+          <option value="Trabalho">Trabalho</option>
+          <option value="Estudo">Estudo</option>
+          <option value="Vida Pessoal">Vida Pessoal</option>
+        </select>
+        <button type="submit" title="Adicionar lembrete">
+          <i class="fas fa-plus"></i> Adicionar
+        </button>
+      </form>
+
+      <ul id="reminderList" class="reminder-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
